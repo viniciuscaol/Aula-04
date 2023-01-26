@@ -24,7 +24,7 @@ pipeline {
 
         stage ('Deploy Kubernet') {
             steps {
-                withKubeconfig ([credentialsID: 'kubeconfig']) {
+                withKubeConfig ([credentialsID: 'kubeconfig']) {
                     sh 'kubectl apply -f ./deployment.yaml'
                 }
             }
