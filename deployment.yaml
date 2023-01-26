@@ -60,11 +60,11 @@ spec:
     spec:
       containers:
         - name: web
-          image: viniciuscaol/aula02-kubenews:v1
+          image: viniciuscaol/aula04-kubenews:{{TAG}}
           ports:
             - containerPort: 8080
           env:
-          - name: DB_DATABASE
+          - name: DB_DATABASES
             value: "kubenews"
           - name: DB_USERNAME
             value: "kubenews"
