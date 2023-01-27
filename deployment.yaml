@@ -33,10 +33,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: postgree
+  name: postgre
 spec:
   selector:
-    app: postgree
+    app: postgre
   ports:
     - port: 5432
   type: ClusterIP
@@ -50,7 +50,6 @@ kind: Deployment
 metadata:
   name: web
 spec:
-  replicas: 3
   selector:
     matchLabels:
       app: web
@@ -61,11 +60,11 @@ spec:
     spec:
       containers:
         - name: web
-          image: viniciuscaol/aula04-kubenews:{{TAG}}
+          image: viniciuscaol/aula02-kubenews:{{TAG}}
           ports:
-          - containerPort: 8080
+            - containerPort: 8080
           env:
-          - name: DB_DATABASES
+          - name: DB_DATABASE
             value: "kubenews"
           - name: DB_USERNAME
             value: "kubenews"
