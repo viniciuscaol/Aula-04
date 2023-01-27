@@ -63,7 +63,7 @@ spec:
         - name: web
           image: viniciuscaol/aula04-kubenews:{{TAG}}
           ports:
-            - containerPort: 8080
+          - containerPort: 8080
           env:
           - name: DB_DATABASES
             value: "kubenews"
