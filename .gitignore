@@ -4,3 +4,7 @@
 terraform.*
 kube_config.yaml
 .ansible/
+terraform.tfvars
+terraform.tfstate
+terraform.tfstate.backup
+terraform.lock.hcl
